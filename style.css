@@ -1,3 +1,9 @@
+html {
+  --primary: #ff803b;
+  --secondary: #ffb791;
+  --box: #fff8f5;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   width: 100%;
@@ -16,13 +22,13 @@ h1 {
 h2 {
   font-family: "Kanit", sans-serif;
   font-size: 2rem;
-  color: pink;
+  color: var(--secondary);
 }
 
 h3 {
   font-family: "Kanit", sans-serif;
   font-size: 1.5rem;
-  color: pink;
+  color: var(--secondary);
 }
 p,
 dt,
@@ -31,9 +37,9 @@ dl {
 }
 
 li {
+  list-style-position: inside;
   font-family: "Heebo", sans-serif;
-  color: #fb3fb3;
-  text-decoration: none;
+  color: var(--primary);
 }
 /**********************MENU****************************/
 
@@ -67,24 +73,24 @@ nav {
   display: block;
   font-size: 1.5rem;
   padding: 10px;
-  color: #ff9abe;
+  color: var(--primary);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .menu a:hover {
-  color: #fb3fb3;
+  color: var(--secondary);
 }
 
 .logo a {
   height: 90px;
   text-decoration: none;
-  color: #fb3fb3;
+  color: var(--primary);
   transition: color 0.3s;
 }
 
 .logo a:hover {
-  color: pink;
+  color: var(--secondary);
 }
 
 /**********************Product site****************************/
@@ -108,7 +114,7 @@ nav {
 
 .breadcrumb li::after {
   content: " > ";
-  color: #fb3fb3;
+  color: var(--primary);
 
   font-size: 0.6rem;
   display: inline-block;
@@ -125,12 +131,12 @@ nav {
 
 .breadcrumb a {
   text-decoration: none;
-  color: #fb3fb3;
+  color: var(--primary);
   transition: color 0.3s;
 }
 
 .breadcrumb a:hover {
-  color: pink;
+  color: var(--secondary);
 }
 
 /**********************IMG****************************/
@@ -142,7 +148,7 @@ img {
 
 /**********************INFO****************************/
 .box {
-  background: #fff5f5;
+  background: var(--box);
   color: var(--background-color);
   padding: 10%;
   border-radius: 20px;
@@ -158,16 +164,17 @@ img {
 }
 
 .categorylist a {
+  font-family: "Kanit", sans-serif;
   text-decoration: none;
   font-size: 2rem;
   padding: 2rem;
   color: white;
-  background-color: pink;
+  background-color: var(--secondary);
   border-radius: 20px;
   transition: background-color 0.5s;
 }
 .categorylist a:hover {
-  background-color: #fb3fb3;
+  background-color: var(--primary);
 }
 
 /**********************PRODUCT LISTim****************************/
@@ -179,12 +186,12 @@ img {
 }
 .productlist main h2 {
   font-size: 3rem;
-  color: #fb3fb3;
+  color: var(--primary);
   grid-column: 1/-1;
 }
 .productlist main h3 {
   font-size: 1.5rem;
-  color: #ff803b;
+  color: var(--primary);
   grid-column: 1/-1;
 }
 .productlist article {
@@ -203,28 +210,45 @@ img {
 .productlist main a {
   font-family: "Heebo", sans-serif;
   text-decoration: none;
-  color: #ff803b;
+  color: var(--primary);
   transition: color 0.3s;
 }
 .productlist main a:hover {
-  color: #ffb791;
+  color: var(--secondary);
 }
 .rolig {
-  color: #ffb791;
+  color: var(--secondary);
 }
 .price {
-  color: #ff803b;
+  color: var(--primary);
 }
 
 .productlist article.onsale .price span {
   display: initial;
 }
 
-.productlist article.soldout::before {
+.productlist article.soldout img {
+  opacity: 0.5;
+}
+
+.productlist article.soldout::after {
   content: "Sold Out";
   font-family: "Heebo", sans-serif;
   position: absolute;
-  background: rgba(255, 255, 255, 0.531);
+  background: rgba(255, 255, 255, 0.68);
   color: black;
   padding: 1% 8% 1% 8%;
+}
+.indexpg p {
+  color: var(--primary);
+}
+.indexpg li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--secondary);
+  transition: color 0.3s;
+}
+
+.indexpg li a:hover {
+  color: var(--primary);
 }
