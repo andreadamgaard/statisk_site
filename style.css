@@ -1,0 +1,230 @@
+body {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 1400px;
+}
+main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0% 0% 0% 8%;
+}
+
+h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3rem;
+}
+h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  color: pink;
+}
+
+h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5rem;
+  color: pink;
+}
+p,
+dt,
+dl {
+  font-family: "Heebo", sans-serif;
+}
+
+li {
+  font-family: "Heebo", sans-serif;
+  color: #fb3fb3;
+  text-decoration: none;
+}
+/**********************MENU****************************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 10px;
+  color: #ff9abe;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #fb3fb3;
+}
+
+.logo a {
+  height: 90px;
+  text-decoration: none;
+  color: #fb3fb3;
+  transition: color 0.3s;
+}
+
+.logo a:hover {
+  color: pink;
+}
+
+/**********************Product site****************************/
+.product main {
+  padding: 0% 1% 0% 2%;
+}
+
+.grid1_1 {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 40%;
+}
+
+/**********************BRED MENU****************************/
+
+.breadcrumb {
+  display: flex;
+  font-size: 1rem;
+  list-style-type: none;
+}
+
+.breadcrumb li::after {
+  content: " > ";
+  color: #fb3fb3;
+
+  font-size: 0.6rem;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  transition: all 0.3s;
+}
+
+.breadcrumb li:last-child::after {
+  background: none;
+  content: "";
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #fb3fb3;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: pink;
+}
+
+/**********************IMG****************************/
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**********************INFO****************************/
+.box {
+  background: #fff5f5;
+  color: var(--background-color);
+  padding: 10%;
+  border-radius: 20px;
+  height: 45%;
+}
+
+/**********************Category****************************/
+
+.categorylist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.categorylist a {
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 2rem;
+  color: white;
+  background-color: pink;
+  border-radius: 20px;
+  transition: background-color 0.5s;
+}
+.categorylist a:hover {
+  background-color: #fb3fb3;
+}
+
+/**********************PRODUCT LISTim****************************/
+
+.productlist main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+  gap: 2rem;
+}
+.productlist main h2 {
+  font-size: 3rem;
+  color: #fb3fb3;
+  grid-column: 1/-1;
+}
+.productlist main h3 {
+  font-size: 1.5rem;
+  color: #ff803b;
+  grid-column: 1/-1;
+}
+.productlist article {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.productlist article > * {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.productlist main p {
+  font-family: "Heebo", sans-serif;
+  text-decoration: none;
+}
+.productlist main a {
+  font-family: "Heebo", sans-serif;
+  text-decoration: none;
+  color: #ff803b;
+  transition: color 0.3s;
+}
+.productlist main a:hover {
+  color: #ffb791;
+}
+.rolig {
+  color: #ffb791;
+}
+.price {
+  color: #ff803b;
+}
+
+.productlist article.onsale .price span {
+  display: initial;
+}
+
+.productlist article.soldout::before {
+  content: "Sold Out";
+  font-family: "Heebo", sans-serif;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.531);
+  color: black;
+  padding: 1% 8% 1% 8%;
+}
