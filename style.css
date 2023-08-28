@@ -2,6 +2,7 @@ html {
   --primary: #ff803b;
   --secondary: #ffb791;
   --box: #fff8f5;
+  --sale: rgb(255, 217, 0);
 }
 
 body {
@@ -99,9 +100,8 @@ nav {
 }
 
 .grid1_1 {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 40%;
+  grid-template-columns: repeat(auto, auto, auto, auto);
+  gap: 2rem;
 }
 
 /**********************BRED MENU****************************/
@@ -167,21 +167,24 @@ img {
   font-family: "Kanit", sans-serif;
   text-decoration: none;
   font-size: 2rem;
-  padding: 2rem;
+  padding: 4.5rem;
   color: white;
   background-color: var(--secondary);
   border-radius: 20px;
   transition: background-color 0.5s;
 }
 .categorylist a:hover {
-  background-color: var(--primary);
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/1000/1163.webp);
+  width: auto;
+  background-position: 15% 30%;
+  /*background-color: var(--primary);*/
 }
 
 /**********************PRODUCT LISTim****************************/
 
 .productlist main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 250px));
   gap: 2rem;
 }
 .productlist main h2 {
@@ -206,6 +209,7 @@ img {
 .productlist main p {
   font-family: "Heebo", sans-serif;
   text-decoration: none;
+  font-size: 1rem;
 }
 .productlist main a {
   font-family: "Heebo", sans-serif;
@@ -223,9 +227,19 @@ img {
   color: var(--primary);
 }
 
-.productlist article.onsale .price span {
-  display: initial;
+/**********************PRODUCTLIST DISCOUNT****************************/
+
+.productlist article.onsale .discounted {
+  display: flex;
+  justify-content: space-between;
 }
+
+.discounted p:last-child {
+  background: var(--sale);
+  padding: 2% 8%;
+}
+
+/**********************PRODUCTLIST SOLD OUT****************************/
 
 .productlist article.soldout img {
   opacity: 0.5;
