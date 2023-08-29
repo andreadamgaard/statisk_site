@@ -3,6 +3,7 @@ html {
   --secondary: #ffb791;
   --box: #fff8f5;
   --sale: rgb(255, 217, 0);
+  --soldout: rgba(255, 217, 0, 0.491);
 }
 
 body {
@@ -99,11 +100,17 @@ nav {
   padding: 0% 1% 0% 2%;
 }
 
-.grid1_1 {
-  grid-template-columns: repeat(auto, auto, auto, auto);
-  gap: 2rem;
+.product img {
+  display: block;
+  max-width: 500px;
+  height: auto;
 }
 
+.grid1_1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 100px;
+}
 /**********************BRED MENU****************************/
 
 .breadcrumb {
@@ -153,6 +160,7 @@ img {
   padding: 10%;
   border-radius: 20px;
   height: 45%;
+  font-family: "Kanit", sans-serif;
 }
 
 /**********************Category****************************/
@@ -181,8 +189,7 @@ img {
 }
 
 /**********************PRODUCT LISTim****************************/
-
-.productlist main {
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 250px));
   gap: 2rem;
@@ -227,14 +234,14 @@ img {
   color: var(--primary);
 }
 
-/**********************PRODUCTLIST DISCOUNT****************************/
+/**********************PRODUCTLIST****************************/
 
-.productlist article.onsale .discounted {
+.productlist article.onsale .discount {
   display: flex;
   justify-content: space-between;
 }
 
-.discounted p:last-child {
+.discount p:last-child {
   background: var(--sale);
   padding: 2% 8%;
 }
@@ -249,10 +256,13 @@ img {
   content: "Sold Out";
   font-family: "Heebo", sans-serif;
   position: absolute;
-  background: rgba(255, 255, 255, 0.68);
+  background: var(--soldout);
   color: black;
-  padding: 1% 8% 1% 8%;
+  padding: 1rem 6rem;
 }
+
+/**********************INDEX SIDE****************************/
+
 .indexpg p {
   color: var(--primary);
 }
