@@ -10,11 +10,12 @@ const parent = document.querySelector(".grid");
 
 function showProduct(product) {
   console.log(product);
-  // document.querySelector(".breadcrumb li:nth-child(2)").textContent = product.productdisplayname;
-  //document.querySelector(".breadcrumb li:nth-child(3)").textContent = product.productdisplayname;
+  document.querySelector(".breadcrumb li:nth-child(2)").textContent = product.category;
+  document.querySelector(".breadcrumb li:nth-child(3)").textContent = product.brandname;
   document.querySelector(".breadcrumb li:nth-child(4)").textContent = product.productdisplayname;
   document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   document.querySelector(".box h3").textContent = product.productdisplayname;
+  //tilføj to forskellige elementer inklusiv noget ekstra imellem
   document.querySelector(".box .p1").textContent = product.articletype + " | " + product.brandname;
   document.querySelector(".box .p2").textContent = product.price;
   if (product.discount) {

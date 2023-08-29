@@ -1,11 +1,15 @@
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
 //fetch
-fetch("https://kea-alt-del.dk/t7/api/products")
+fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
   .then((res) => res.json())
   .then(showProducts);
 
 function showProducts(products) {
   //loope
   products.forEach(showProduct);
+  copy.querySelector("h2").textContent = product.brandname;
 }
 
 const template = document.querySelector("template").content;
@@ -14,6 +18,7 @@ const parent = document.querySelector(".grid");
 function showProduct(product) {
   const copy = template.cloneNode(true);
   console.log(product);
+  //copy.querySelector("h2").textContent = product.brandname;
   copy.querySelector("h3").textContent = product.productdisplayname;
   copy.querySelector("p.p1").textContent = product.articletype + " | " + product.brandname;
   copy.querySelector("p.p2").textContent = product.price;

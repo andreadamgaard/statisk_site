@@ -165,29 +165,31 @@ img {
 
 /**********************Category****************************/
 
-.categorylist {
+.categorylist ul {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1em;
 }
-
-.categorylist a {
-  font-family: "Kanit", sans-serif;
-  text-decoration: none;
-  font-size: 2rem;
-  padding: 4.5rem;
+.categorylist ul li {
+  list-style-type: none;
+  padding: 2em;
   color: white;
   background-color: var(--secondary);
-  border-radius: 20px;
-  transition: background-color 0.5s;
-}
-.categorylist a:hover {
-  background-image: url(https://kea-alt-del.dk/t7/images/webp/1000/1163.webp);
-  width: auto;
-  background-position: 15% 30%;
-  /*background-color: var(--primary);*/
+  border-radius: 5px;
 }
 
+.categorylist ul li a {
+  text-decoration: none;
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5rem;
+  color: var(--box);
+  text-align: center;
+  display: block;
+  transition: background-color 0.5s;
+}
+.categorylist ul li a:hover {
+  color: var(--primary);
+}
 /**********************PRODUCT LISTim****************************/
 .grid {
   display: grid;
