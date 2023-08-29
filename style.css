@@ -159,7 +159,7 @@ img {
   color: var(--background-color);
   padding: 10%;
   border-radius: 20px;
-  height: 45%;
+  height: 55%;
   font-family: "Kanit", sans-serif;
 }
 
@@ -253,6 +253,19 @@ img {
 }
 
 .productlist article.soldout::after {
+  content: "Sold Out";
+  font-family: "Heebo", sans-serif;
+  position: absolute;
+  background: var(--soldout);
+  color: black;
+  padding: 1rem 6rem;
+}
+
+.product article.soldout img {
+  opacity: 0.5;
+}
+
+.product article.soldout::after {
   content: "Sold Out";
   font-family: "Heebo", sans-serif;
   position: absolute;
